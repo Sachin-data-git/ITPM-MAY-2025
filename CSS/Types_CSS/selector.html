@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+            *{
+                /* border: 1px solid red; */
+            }
+         
+        /* Element /Tag Selector */
+        /* p{
+            color: red;
+        } */
+      
+
+        /* ID selector (# idname)  fastest Selector */
+        #demo{
+        color: red;
+      }
+
+      /* CLASS Selector */
+      .newcls{
+        color: blue;
+      }
+
+      /* Group Selector  (,)*/
+      #demo,.newcls{
+        background-color: yellow;
+      }
+
+      /* Descendent Selector */
+           
+      div p span{
+        color: red;
+      }
+      /* Child Combinator Selector */
+           
+      div>h1>p>span{
+        color: red;
+      }
+
+
+      /* Attribute Selector */
+      input[type="password"]{
+        background-color: yellow;
+      }
+
+      a[target="_blank"]
+      {
+        color: red;
+      }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <p id="demo" class="newcls">Lorem ipsum dolor sit amet.</p>
+    <p class="newcls"> Lorem ipsum dolor sit amet.</p>
+    <p> Lorem ipsum dolor sit amet.</p>
+    <p class="newcls"> Lorem ipsum dolor sit amet.</p>
+    <p> Lorem ipsum dolor sit amet.</p>
+    <p class="newcls"> Lorem ipsum dolor sit amet.</p>
+
+    <span>Lorem ipsum dolor sit amet.</span> -->
+
+
+    <div>
+        <h1>
+        <p><span>This is Inside div</span></p>
+        </h1>
+    </div>
+
+    <span>This is Outside the div</span>
+
+
+    <input type="text">
+    <input type="email">
+    <input type="password">
+
+    <a href="" target="_blank" >click1</a>
+    <a href="" target="_parent" >click2</a>
+
+
+
+
+
+</body>
+</html>
