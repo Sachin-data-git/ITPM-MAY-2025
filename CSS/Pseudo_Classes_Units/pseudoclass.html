@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #an1:visited{
+            color: yellow;
+        }
+        #an2:active{
+            font-size: 40px;
+        }
+        #an3:hover{
+            color: red;
+            background-color: yellow;
+        }
+
+        #inp1:focus{
+            background-color: red;
+            color: yellow;
+        }
+        #inp2:disabled{
+            background-color: red;
+        }
+        #inp3:read-only{
+            color: red;
+        }
+        #inp4:required{
+            border:1px solid red;
+        }
+        #inp5:invalid{
+            color: red;
+        }
+        #inp5:valid{
+            color: green;
+        }
+        input[type=checkbox]:checked{
+             height: 100px;
+             width: 100px;
+        }
+        li:first-child{
+            background-color: yellow;
+        }
+        li:last-child{
+            background-color: rgb(228, 19, 19);
+        }
+        li:nth-child(2){
+            background-color: gray;
+        }
+        li:empty{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h2>Link Related Pseudo Classes</h2>
+    <a href="###" id="an1">Visited</a>
+    <a href="####" id="an2">Active</a>
+    <a href="####" id="an3">Hover</a>
+   <hr>
+    <h2>Inputed Related Pseudo Classes</h2>
+    <form action="">
+        <input type="text" id="inp1">
+    <input type="text" id="inp2" disabled>
+    <input type="text"  id="inp3" value="Demo" readonly>
+    <input type="text" id="inp4" required>
+    <input type="email" id="inp5">
+    <input type="checkbox" checked>
+    <input type="submit">
+    </form>
+
+
+    <h2>Position or Numbered Pseudo</h2>
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li></li>
+        <li>4</li>
+        <li>5</li>
+        <li></li>
+        <li>7</li>
+        <li></li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</body>
+</html>

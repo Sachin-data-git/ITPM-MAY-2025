@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::before{
+              content: "Hello ";
+              color: red;
+        }
+        h1::after{
+              content: " to Itpreneur ";
+              color: red;
+        }
+        #demo::first-letter{
+            color: red;
+            font-size: 40px;
+        }
+        #demo::first-line{
+            background-color: yellow;
+        }
+        input::placeholder{
+            text-align: center;
+            color: red;
+        }
+        #demo1::selection{
+            color: red;
+               background-color: yellow;
+        }
+        #demo1{
+            /* user-select: auto; */
+            /* user-select: all; */
+            /* user-select: none; */
+        }
+    </style>
+</head>
+<body>
+      <h1>Welcome</h1>
+
+      <p id="demo">Demo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste eligendi consequuntur fugiat officiis non id tempore totam nam repellat accusantium beatae ut assumenda culpa, et veniam aliquam, voluptatem porro optio.</p>
+
+      <input type="text" placeholder="Enter Name">
+      <p id="demo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium cupiditate distinctio iusto blanditiis suscipit quis unde repellat. Dolores maiores totam mollitia molestiae ut amet optio? Quam voluptatem perferendis animi.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla accusamus et rerum maiores consequuntur amet voluptates necessitatibus aut voluptas, omnis, perspiciatis maxime, nesciunt perferendis ut iste vitae debitis. Assumenda, praesentium!</p>
+</body>
+</html>
