@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .items{
+           width: 100%;
+           border: 1px solid red;
+           background-color: yellow;
+           text-align: center;
+           padding: 0px 0px 20px 0px;
+        }
+        .items img{
+            width: 100%;
+        }
+        button{
+            padding: 15px;
+            margin-top: 10px;
+            background-color: green;
+            border-color: white;
+            border-radius: 10px;
+        }
+         h1{
+            display: none;
+        }
+
+        /* Tablet */
+        @media only screen and (min-width:768px){
+              .items{
+           width: 48%;
+           background-color: orange;
+        }
+         h1{
+            display: block;
+        }
+       
+        }
+
+        /* Desk */
+        @media only screen and (min-width:1200px){
+              .items{
+           width: 30%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Heading</h1>
+     <section id="container">
+          <div class="items">
+            <img src="https://organicindia.com/cdn/shop/articles/Herbs_for_digestion_and_bloating_8a3481ca-9883-49b2-8127-9ef2268d95d9_535x420_crop_center.png?v=1751457989" alt="Image not found">
+            <h2>This is Title</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button>Read More</button>
+          </div>
+          <div class="items">
+            <img src="https://organicindia.com/cdn/shop/articles/Herbs_for_digestion_and_bloating_8a3481ca-9883-49b2-8127-9ef2268d95d9_535x420_crop_center.png?v=1751457989" alt="Image not found">
+            <h2>This is Title</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button>Read More</button>
+          </div>
+          <div class="items">
+            <img src="https://organicindia.com/cdn/shop/articles/Herbs_for_digestion_and_bloating_8a3481ca-9883-49b2-8127-9ef2268d95d9_535x420_crop_center.png?v=1751457989" alt="Image not found">
+            <h2>This is Title</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button>Read More</button>
+          </div>
+     </section>
+</body>
+</html>
