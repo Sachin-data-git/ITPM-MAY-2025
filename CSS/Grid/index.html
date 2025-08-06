@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        section{
+            height: 500px;
+            border: 2px solid green;
+            display: grid;
+            /* it is use to create the columns  width*/
+            /* grid-template-columns:200px 200px 200px 200px; */
+            grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+
+              /* it is use to create the rows  height*/
+              grid-template-rows:repeat(4,200px);
+
+              
+              /* column-gap: 10px */
+              /* row-gap: 10px */
+               /* shorthand for row and column gap */
+              /* gap:20px ; */
+              /* justify-content: space-evenly; */
+
+            
+
+
+
+        }
+        div{
+            /* height: 100px; */
+            /* width: 100px; */
+            border: 1px solid red;
+            background-color: yellow;
+        }
+        #demo1{
+             /* grid-row-start: 2;
+            grid-row-end: -1; */
+            /* shorthand */
+            /* grid-row: 2/-1; */
+
+            /* grid-column-start: 2;
+            grid-column-end: 4; */
+             /* shorthand */
+            /* grid-column:2/4 ; */
+
+
+            /* shorthand */
+            /* grid-area:2/2/-1/4 ; */
+
+           
+
+        }
+        @media only screen and (min-width:768px){
+            div{
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+       <section>
+        <div id="demo1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+       </section>
+</body>
+</html>
