@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+    /* border:1px solid red ; */
+}
+#navbar{
+    display: none;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+}
+header div{
+    width: 30%;
+}
+header div img{
+    width: 100%;
+}
+#herosection{
+    width: 100%;
+    margin-top: 100px;
+}
+#herosection div{
+    width: 100%;
+}
+#herosection div img{
+    width: 100%;
+}
+
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.about-item{
+    width: 30%;
+    text-align: center;
+}
+.about-item img{
+    width: 100%;
+}
+
+
+#product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0px;
+}
+#product-uniq{
+    width: 100%;
+    text-align: center;
+}
+.product-item{
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    margin: 10px;
+}
+.product-item img{
+    width: 100%;
+}
+
+#service,#parent{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-item{
+    width: 100%;
+
+}
+.service-item img{
+    width: 100%;
+}
+
+#uniq{
+    width: 100%;
+}
+
+#parent{
+    justify-content: space-evenly;
+}
+.service_img{
+    width: 20%;
+}
+.service_img img{
+    width: 90%;
+}
+.service_text{
+    width: 75%;
+}
+
+#healthy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px 0px;
+}
+.healthy-item{
+    width: 100%;
+    
+}
+.healthy-item img{
+    width: 100%;
+
+}
+#review{
+    background-image: url(https://organicindia.com/cdn/shop/files/1920-X-830-testimonial.png?v=1666267004);
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#review div{
+    width: 100%;
+    text-align: center;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(47, 75, 5);
+}
+.ftr-1{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+.ftr-2{
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+    padding: 20px 0px;
+}
+
+@media only screen and (min-width:768px){
+    #menu{
+        text-align: right;
+    }
+    header div img{
+    width: 50%;
+}
+
+.about-item{
+    width: 24%;
+}
+.about-item img{
+    width: 80%;
+}
+
+.product-item{
+    width: 46%;
+}
+.service-item{
+    width: 46%;
+
+}
+#service{
+   align-items: center;     
+}
+#lll{
+clip-path: polygon(8% 3%, 90% 3%, 91% 100%, 8% 100%);
+
+}
+
+.healthy-item{
+    width: 46%;
+    
+}
+#review div{
+    width: 80%;
+}
+.ftr-1{
+    width: 46%;
+    
+}
+}
+
+@media only screen and (min-width:1200px){
+    #menu{
+        display: none;
+    }
+    #navbar{
+    display: block;
+}
+#para{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ header div img{
+    width: 30%;
+}
+#about{
+    width: 80%;
+    align-content: center;
+
+}
+#aboutparent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.product-item{
+    width: 23%;
+}
+#lll{
+    clip-path: circle(50% at 50% 50%);
+    width: 80%;
+}
+#demo{
+    line-height: 40px;
+}
+button{
+    padding: 10px;
+    background-color: orange;
+}
+
+
+#review{
+    height: 500px;
+}
+#review div{
+    width: 50%;
+}
+.ftr-1{
+    width: 23%;
+    
+}
+}
