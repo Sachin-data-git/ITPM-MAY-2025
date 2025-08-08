@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            /* CSS transitions allows you to change property values smoothly, over a given duration. */
+
+            transition-duration:5s;
+            /* Specifies how long the transition from the old value to the new value should take. */
+
+            /* transition-delay:5s; */
+            /* Defines when the transition will start. It allows a transition to begin execution some period of time from when it is applied. */
+
+            /* transition-timing-function:ease ;
+            transition-timing-function:linear ;
+            transition-timing-function:ease-in ;
+            transition-timing-function:ease-out ;
+            transition-timing-function:ease-in-out; */
+            /* Describes how the intermediate values used during a transition will be calculated. */
+        }
+        div:hover{
+            background-color: blue;
+            /* width: 500px; */
+        }
+
+        
+    </style>
+</head>
+<body>
+      <div>
+        1
+      </div>
+</body>
+</html>
