@@ -1,0 +1,35 @@
+Bootstrap is a free, open-source front-end framework used to quickly design and develop responsive and mobile-first websites. It was originally created by Twitter developers Mark Otto and Jacob Thornton and is now maintained by the open-source community.
+
+Key Features
+Responsive Design
+
+Websites automatically adjust layout and content to fit different screen sizes (mobile, tablet, desktop).
+
+Pre-designed Components
+
+Ready-to-use elements like buttons, navigation bars, forms, modals, alerts, carousels, etc.
+
+CSS Utility Classes
+
+Classes for margins, padding, colors, font styles, borders, and more — no need to write custom CSS for common styles.
+
+Grid System
+
+A 12-column flexible layout system for arranging content in rows and columns.
+
+Cross-browser Compatibility
+
+Works well in all modern browsers.
+
+JavaScript Plugins
+
+Prebuilt interactive elements like dropdowns, sliders, modals, tooltips, etc., using JavaScript .
+
+Why Use Bootstrap?
+Faster development — no need to write every style from scratch.
+
+Consistency — all UI components look uniform.
+
+Mobile-first approach — prioritizes mobile design before scaling up to desktop.
+
+Customizable — you can use only the parts you need.
