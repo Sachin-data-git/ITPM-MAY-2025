@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="username">
+
+    <script>
+        
+          let username;
+          let password
+
+       do{
+         username=prompt("Enter Username");
+         password=prompt("Enter Password");
+         if((username=="demo")&&(password=="demo@123")){
+            console.log("Login Successfully....")
+        }
+        else{
+            alert("Invalid UserName and Password")
+        }
+       }while(!((username=="demo")&&(password=="demo@123")))
+
+
+    </script>
+</body>
+</html>
