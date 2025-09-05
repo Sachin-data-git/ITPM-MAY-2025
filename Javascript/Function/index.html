@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <button>click</button>
+    <script>
+        //syntax
+        // function functionName(){//code}
+
+        // 1)default Function
+        //function defination
+        // function addData(){
+        //     let x=10;
+        //     let y=20;
+        //     console.log(x+y);
+        // }
+
+        //calling
+        // addData();
+        // addData();
+        // addData();
+        // addData();
+
+        // 2)parametrised Function
+        // let p = 10;
+        // let q = 40;
+        // function addData1(x, y) {
+        //     console.log(x + y);
+        // }
+
+        // addData1(10, 20);
+        // addData1(100, 200);
+        // addData1(p, q);
+
+
+        //default parameter
+        // function userName(user="demo"){
+        //     console.log("Welcome, "+ user)
+        // }
+
+        // userName("Ajay");
+        // userName();
+
+        //rest Parameter
+
+        // function restData(a,b,...restdata){
+        //     console.log(a,b);
+        //     console.log(restdata);
+        // }
+        // restData(1,2,3,4,5);
+
+
+        // 3)return type / function returning value
+
+        // function demo(a,b){
+        //     return a+b;
+        // }
+
+        // let result=demo(10,20);
+        // console.log(result);
+
+        //Arrow Function
+
+        //  const demo=()=>{
+        //        console.log("This is arrow function");
+        //  }
+        //  demo();
+
+
+
+
+        //      document.querySelector("button").addEventListener("click",()=>{
+        //         console.log("without name");
+        //      }
+        // )
+
+
+        //IIFE (Immediate invoked function expression)
+        // (() => {
+        //     console.log("without name");
+        // })()
+
+        //js closure (function within function)
+        // let x=20;//global
+
+        function first() {
+            let x = 20;//local
+
+            console.log("x value inside first function is : ", x)
+            // console.log("y value inside first function is : ",y)
+
+
+            function second() {
+                let y = 30;  //local
+                console.log("x value inside second function is : ", x)
+
+                function third() {
+                    console.log(x);
+                }
+                third();
+            }
+            second();
+        }
+        first();
+
+        // Task
+//         Create a function that prints the addition of two numbers.
+
+
+// Create a function that takes two numbers and prints their product.
+
+
+// Write a function that subtracts one number from another and returns the result.
+
+// Write a function divide(a, b) that returns the result of dividing a by b.Set a default value of 1 for b.
+
+
+// Create a function greet(name = "User") that prints a greeting message like "Hello, User!".
+
+// Write a function square(num = 2) that returns the square of a number.
+
+
+// Create a function fullName(firstName, lastName = "Doe") that prints the full name of a person.
+
+// Write a function findArea(length = 5, width = 10) that returns the area of a rectangle.
+
+
+// Create a function showAge(name = "Unknown", age = 0) that prints a sentence like "Unknown is 0 years old.".
+
+// Write a function isEven(num = 0) that returns true if the number is even, and false otherwise.
+// Create a function repeatMessage(message = "Hi", times = 3) that prints the message multiple times.
+
+// Write a function formatEmail(username = "user", domain = "example.com") that returns an email address in the format user @example.com.
+
+// Write a function isPositive(num = 0) that returns true if the number is positive, false otherwise.
+
+// Create a function minValue(a = 10, b = 20) that returns the smaller of the two numbers.
+
+
+// Write a function maxValue(a = 10, b = 20) that returns the larger of the two numbers.
+
+
+
+    </script>
+</body>
+
+</html>
