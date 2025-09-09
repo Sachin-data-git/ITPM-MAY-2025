@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let color=["green","red","orange","blue","yellow"];
+
+        //push - Appends new elements to the end of an array, and returns the new length of the array
+        console.log(color);
+        console.log(color.push("violet")); //6
+        console.log("After Push array is", color);
+        
+        //         pop - Removes the last element from an array and returns it.
+        // If the array is empty, undefined is returned and the array is not modified.
+        console.log(color.pop()); //violet
+        console.log("After pop array is", color);
+        
+        //shift - Removes the first element from an array and returns it.
+        // If the array is empty, undefined is returned and the array is not modified.
+        console.log(color.shift());
+        console.log("After Shift array is", color);
+        
+        //unshift  Inserts new elements at the start of an array, and returns the new length of the array.
+        console.log(color.unshift("skyblue"));
+        console.log("After unshift array is", color);
+
+        //splice(start,deletecount,item) (cut-paste)  Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements 
+        console.log(color);
+        console.log(color.splice(3,2,"newvalue","demo"));
+        console.log(color);
+        </script>
+    
+</body>
+</html>
