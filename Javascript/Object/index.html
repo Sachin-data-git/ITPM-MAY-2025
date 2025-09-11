@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <script>
+
+        //single Object
+        let student={
+            id:1,
+            name:"ajay",
+            Marks:{
+                Math:50,
+                Sci:40,
+                Eng:20
+            }
+            ,
+            clg:"Fc college"
+        }
+
+        //how to access
+        // console.log(obj.id);
+        // console.log(obj.name);
+        // console.log(obj.Marks.Sci);
+
+
+        //Array Object
+        // let Students=[{
+        //     id:1,
+        //     name:"ajay",
+        //     clg:"Fc"
+        // },{
+        //     id:2,
+        //     name:"aman",
+           
+        // },{
+        //     id:3,
+        //     name:"ashish",
+           
+        // },{
+        //     id:4,
+        //     name:"akash",
+    
+        // }]
+
+        // console.log(Students[1].id);
+        
+        // for(i=0;i<Students.length;i++){
+            
+        //     console.log(`Id is ${Students[i].id} name is ${Students[i].name} colleg name ${Students[0].clg} ` );
+        // }
+
+        // let obj={
+        //     id:1,
+        //     name:"aman",
+        //     age:23
+
+        // }
+
+        // console.log(Object.keys(obj));
+        // console.log(Object.values(obj));
+        // console.log(Object.entries(obj));
+
+        // const obj={
+        //     id:1,
+        //     email:"demo@gmail.com"
+        // };
+
+        //update
+        // obj.id=3;
+        // obj.email="demo1@gmail.com";
+        // obj.age=23;
+
+        // //delete
+        // delete obj.id;
+
+        // console.log(obj);
+
+        // Object.freeze(obj);
+        //  obj.id=3;
+        // obj.email="demo1@gmail.com";
+        // console.log(obj);
+
+        //Destructuring
+         const obj={
+            id:1,
+            email:"demo@gmail.com",
+        };
+         const obj1={
+            ids:2,
+            email1:"demo@gmail.com",
+        };
+
+        // console.log(obj.id);
+        // let{id,email}=obj;
+        // console.log(id);
+        // console.log(email);
+
+
+        //Spread Operator
+       let newObj={...obj,...obj1};
+       console.log(newObj)
+
+
+
+         
+    </script>
+</body>
+</html>

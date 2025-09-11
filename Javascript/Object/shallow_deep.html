@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let original={
+            id:1,
+            name:"Ajay",
+            Marks:{
+                Math:10,
+                Sci:20
+            }
+        }
+
+        // JSON.parse() - convert JSON Object to js Object
+        // JSON.stringify() - convert js Object to JSON Object
+        let jsonData=JSON.stringify(original)
+        console.log(jsonData);
+
+        let jsdata=JSON.parse(jsonData);
+        console.log(jsdata)
+
+      
+
+        
+
+
+
+        //ShallowCopy
+        // let shallowCopy=Object.assign({},original);
+        // shallowCopy.Marks.Math=50;
+        // console.log(shallowCopy);
+        // console.log(original);
+
+        //deepCopy
+        // let deepCopy=JSON.parse(JSON.stringify(original));
+        // deepCopy.Marks.Math=100;
+        // console.log(deepCopy);
+        // console.log(original);
+
+
+    </script>
+    
+</body>
+</html>
