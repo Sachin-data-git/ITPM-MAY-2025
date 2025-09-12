@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+
+  <h1></h1>
     
     <script>
         let data=[
@@ -610,6 +612,19 @@
     "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
   }
 ]
+
+
+     let filterdata=data.filter(num=>{return num.id<51});
+     console.log(filterdata);
+
+     filterdata.map(data=>{
+      // document.writeln(data.id +"<br>")
+      // document.writeln(data.title +"<br>")
+      // document.writeln(data.body +"<br>")
+      document.querySelectorAll("h1").innerHTML+=data.id +"<br>";
+     })
+
+   
 
 
     </script>
