@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>This is Paragraph</p>
+    </div>
+    <section id="demo">
+        <p id="para"></p>
+    </section>
+
+    <p id="textdata">This is old data</p>
+    <script>
+        //get
+        // let element=document.querySelector("div").innerHTML;
+        // console.log(element);
+        // let content=document.querySelector("div").innerText;
+        // console.log(content);
+
+        //set
+        //    document.getElementById("demo").innerHTML="<b>This is Bold tag</b>";
+
+        //    document.getElementById("para").innerText="<span>This is Span</span>";
+        //    document.getElementById("para").innerHTML="<span>This is Span</span>";
+
+
+        //textContent -- replace the data
+
+        document.querySelector("#textdata").textContent="This is Replaced Data"
+
+
+
+
+    </script>
+</body>
+</html>

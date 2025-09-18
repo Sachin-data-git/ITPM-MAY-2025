@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- <style>
+        div{
+            color: red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- DOM Accessing methods -->
+    <!-- getElementById("idName"), getElementsByClassName("className"),getElementsByTagName("tagName"),querySelector("any selector"),querySelectorAll("any selector") -->
+    <div>
+        <p id="demo">This is paragraph</p>
+    </div>
+
+    <span class="newcls">This is Span1</span><br>
+    <span class="newcls">This is Span2</span><br>
+    <span class="newcls">This is Span3</span><br>
+    <span class="newcls">This is Span4</span><br>
+
+    <b>Lorem ipsum dolor sit amet.</b><br>
+    <b>Lorem ipsum dolor sit amet.</b><br>
+    <b>Lorem ipsum dolor sit amet.</b><br>
+    <b>Lorem ipsum dolor sit amet.</b><br>
+
+    <script>
+        // By Id
+        // let element=document.getElementById("demo");
+        // console.log(element);
+
+        // element.style.propertyName="Value"
+        // let txtcolor=prompt("Enter ColorName");
+        // element.style.color=txtcolor;
+
+
+        //By Class
+        // let byclass = document.getElementsByClassName("newcls");
+        // console.log(byclass)
+
+        // byclass[0].style.color="red";
+        // byclass[1].style.color="red";
+        // byclass[2].style.color="red";
+        // byclass[3].style.color="red";
+
+        // for (i = 0; i < byclass.length; i++) {
+
+        //     byclass[i].style.color = "red";
+        // }
+
+
+        //by TagName
+
+        // let bytag = document.getElementsByTagName("b");
+
+        // for (i = 0; i < bytag.length; i++) {
+
+        //     bytag[i].style.color = "blue";
+        // }
+
+        //by querySelector
+
+        // let querysel=document.querySelector(".newcls");
+        // querysel.style.color="orange"
+
+        //by querySelectorAll
+        let qall=document.querySelectorAll("b");
+        console.log(qall);
+        
+        // for(i=0;i<qall.length;i++){
+        //     qall[i].style.color="yellow"
+        // }
+
+        // qall.forEach((n)=>{
+        //     n.style.color="red"
+        // })
+
+
+    </script>
+
+</body>
+
+</html>
