@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darktheme{
+            background-color: black;
+            color: white;
+        }
+        .lightTheme{
+            background-color: white;
+            color: black;
+        }
+        #demo1{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo" class="darktheme">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti assumenda consectetur, iste fugit ea
+        eligendi officia perferendis cumque mollitia, dolorem harum esse? Quam deserunt dolor, quae ab totam deleniti
+        ipsam.</p>
+        <button onclick="changeTheme()">Dark</button>
+    <script>
+
+        let para = document.getElementById("demo");
+        //1) element.style.propertyName="value";
+        // para.style.color = "red";
+        // para.style.color = "red";
+        // para.style.backgroundColor = "yellow";
+
+        //2)element.style.setProperty("propertyName","value");
+        // para.style.setProperty("background-color","blue");
+
+        //3) element.classList.add("className");
+        // para.classList.add("darktheme");
+        // para.classList.remove("darktheme")
+        // para.classList.replace("darktheme","lightTheme")
+       
+        // function changeTheme(){
+        //      para.classList.toggle("lightTheme");
+        //      let theme=document.querySelector("button").innerText;
+        //      console.log(theme)
+
+        //     if(theme=="Dark"){
+        //         document.querySelector("button").innerText="Light";
+        //     }
+        //     else{
+        //       document.querySelector("button").innerText="Dark";
+
+        //     }
+        // }
+
+
+        //4)By id
+
+        // para.id="demo1";
+
+
+
+
+    </script>
+</body>
+
+</html>

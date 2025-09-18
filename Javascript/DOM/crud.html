@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="first">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ipsum nam harum, nihil accusantium aliquam, neque, quia delectus quisquam minima odio maiores cumque. Quis praesentium et beatae necessitatibus, amet dolorum?</p>
+        <h2>This is h2</h2>
+        <h3>This is H3</h3>
+    </div>
+
+    <button onclick="addData()">addData</button>
+    <button onclick="InsertBefore()">InsertBefore</button>
+    <button onclick="remove()">remove</button>
+    <button onclick="replace()">Replace</button>
+
+
+    <script>
+        function addData(){
+            let element=document.createElement("p");
+        console.log(element);
+
+        let content=document.createTextNode("This is Paragraph");
+        console.log(content);
+
+        element.appendChild(content);
+        console.log(element);
+
+        let parent=document.getElementById("parent");
+        parent.appendChild(element);
+        }
+
+
+
+        function InsertBefore(){
+            let element=document.createElement("h1");
+        console.log(element);
+
+        let content=document.createTextNode("This is h2");
+        console.log(content);
+
+        element.appendChild(content);
+        // console.log(element);
+
+        let parent=document.getElementById("parent");
+        let ref=document.querySelector("h2")
+           parent.insertBefore(element,ref);
+        }
+
+
+        function remove(){
+            let element=document.querySelector("#parent");
+            let child=document.querySelector("h2");
+            // element.remove(); 
+            element.removeChild(child);
+        }
+
+         
+        function replace(){
+            let element=document.createElement("h4");
+            let content=document.createTextNode("This is h4");
+            element.appendChild(content);
+
+            let parent=document.getElementById("parent");
+            let child=document.querySelector("h3");
+            parent.replaceChild(element,child);
+
+
+        }
+
+
+    </script>
+</body>
+</html>
