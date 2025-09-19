@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .newcls{
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+       <form action="" style="border: 1px solid red; height: 100px; width: 210px; margin: 0px auto; background-color: yellow; color: red; padding: 20px; text-align: center;">
+        <label for="">UserName</label>
+        <input type="email" placeholder="Enter Username"><br>
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter Password" id="pass">
+        <i class="fas fa-eye-slash" onmousedown="show()" onmouseup="hide()"></i>
+        <input type="submit" value="login" style="margin-top: 10px; padding: 5px ;">
+       </form>
+
+       <a href="www.com">click</a>
+
+
+       <p class="newcls">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rem molestiae repellendus vitae! Fuga aliquam corporis velit nobis dolorem vel soluta id recusandae ad exercitationem distinctio, cumque rem necessitatibus iure?</p>
+
+
+
+
+       <script>
+        function show(){
+            // element.setAttribute("attrName","value");
+           document.getElementById("pass").setAttribute("type","text");
+           document.querySelector("i").setAttribute("class","fas fa-eye")
+        }
+        function hide(){
+           document.getElementById("pass").setAttribute("type","password");
+           document.querySelector("i").setAttribute("class","fas fa-eye-slash")
+        }
+
+
+
+        let data=document.querySelector("a").getAttribute("href");
+        alert(data)
+
+        document.querySelector("p").removeAttribute("class");
+
+
+        // task
+        // change the image on button like prev and next use setAttribute for same
+       </script>
+</body>
+</html>
