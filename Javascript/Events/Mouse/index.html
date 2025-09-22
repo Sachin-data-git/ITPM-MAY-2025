@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, doloremque minima aperiam maiores quas quos nostrum totam ipsum ea optio suscipit ratione voluptas at, odio officia quibusdam. Quia, natus alias?</p>
+    
+       <!-- <button onclick="changeColor()">click</button> -->
+       <button id="btn1">click</button><br><br>
+
+       <button onclick="decrement()" >-</button>
+       <span>0</span>
+       <button onclick="increment()" >+</button>
+
+       <br>
+       <hr>
+       <p id="para2">Lorem ipsum dolor sit amet.</p>
+       <button id="btn2">doubleClick</button>
+
+       <section style="height: 200px; width: 200px; border: 1px solid red;">
+
+       </section>
+
+       <h1>This is H1</h1>
+
+
+       <div onmouseenter="demo1(this)" onmouseleave="demol1(this)">demo1</div>
+       <div onmouseover="demo2(this)" onmouseout="demoo2(this)">demo2</div>
+
+       <script>
+        // function changeColor(){
+        //     //   alert("This is Button")
+        //     document.querySelector("p").style.color="red";
+
+        // }
+
+        let  button=document.getElementById("btn1");
+
+        // button.addEventListener("click",demo);        
+        // function demo(){
+        //     alert("This is button");
+        // }
+
+        //Event Listener
+        // button.addEventListener("click",()=>{
+        //     alert("This is alert-1");
+        // },false)
+        // button.addEventListener("click",()=>{
+        //     alert("This is alert-2");
+        // },false)
+
+        //Event Handler
+        // button.onclick=()=>{
+        //     alert("This is alert-1")
+        // }
+        // button.onclick=()=>{
+        //     alert("This is alert-2")
+        // }
+
+
+        let num=0;
+      function increment(){
+        num++;
+        document.querySelector("span").innerHTML=num;
+      }
+      function decrement(){
+        num--;
+        document.querySelector("span").innerHTML=num;
+      }
+
+      let btn2=document.getElementById("btn2");
+      btn2.addEventListener("dblclick",()=>{
+      document.getElementById("para2").style.setProperty("background-color","yellow")
+      })
+
+
+    //   document.querySelector("section").addEventListener("mousemove",(event)=>{
+    //     // console.log("Mouse Moved");
+    //     console.log(event.clientX);
+    //     console.log(event.clientY);
+    //     console.log(event.layerX);
+    //   })
+
+    // document.querySelector("section").addEventListener("mouseover",()=>{
+    //     alert("This is section")
+    // })
+
+
+    function demo1(x){
+        x.style.backgroundColor="yellow";
+
+    }
+    function demol1(p){
+        p.style.backgroundColor="green";
+
+    }
+    function demo2(y){
+        y.style.backgroundColor="pink";
+
+    }
+    function demoo2(n){
+        n.style.backgroundColor="violet";
+
+    }
+
+   let count=0;
+    document.addEventListener("contextmenu",(event)=>{
+        event.preventDefault();
+        count++;
+        alert(count)
+        if(count==3){
+            // this.close();
+            // window.close();
+        }
+    })
+
+    // onchange
+
+    // Task
+    // 1.Change the  color and background color of paragraph after clicking on the button 
+    //2. change the size of div after double clicking on that div itself (use this keyword)
+    //3.refer organic india website and create that section using onmouseover and onmouseout /  onmouseenter and onmouseleave
+
+    //4.just print the clienX and clienY of document using mousemove event
+    
+    //5. contextmenu if user right click on document first time then add rainbow first background color to document
+
+       </script>
+</body>
+</html>
