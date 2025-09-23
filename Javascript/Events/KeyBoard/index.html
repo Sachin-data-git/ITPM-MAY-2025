@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
+    <input type="text" name="" id="demo">
+    <a href="https://organicindia.com/?srsltid=AfmBOoomNL5Bx5mtnjpjZzsYTbjNvV8HrTVH_6nfFF-xWnnnxV7iowCI" id="link">Click</a>
     <script>
         // document.addEventListener("keydown",(event)=>{
         //     console.log("key down....");
@@ -19,6 +24,45 @@
         //     console.log("key up....");
         //     console.log(event.key);
         // })
+
+
+        // document.addEventListener("keydown", (event) => {
+           
+        //     if(event.ctrlKey&&event.key.toLowerCase()=="s"){
+        //         event.preventDefault();
+        //         alert("Save Prevented")
+        //     }
+        // })
+
+        document.getElementById("demo").addEventListener("keydown",(event)=>{
+        //   let char="!";
+          let char=["!","@","#","$","%","^","&","*"];
+
+          if(char.includes(event.key)){
+            event.preventDefault();
+          }
+
+        })
+
+
+        let link=document.getElementById("link");
+
+        link.addEventListener("click",(event)=>{
+           event.preventDefault();
+        })
+
+        link.addEventListener("dblclick",()=>{
+           window.location="https://organicindia.com/?srsltid=AfmBOoomNL5Bx5mtnjpjZzsYTbjNvV8HrTVH_6nfFF-xWnnnxV7iowCI"
+        })
+
+
+
+        
+
+
+
+
     </script>
 </body>
+
 </html>
