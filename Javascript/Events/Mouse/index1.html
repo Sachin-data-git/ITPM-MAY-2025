@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onchange</title>
+</head>
+<body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur odit impedit laborum maxime doloremque? Cum voluptate quisquam sit. Eaque architecto ab impedit repellendus reprehenderit dolore rerum temporibus vero fugiat corporis?</p>
+
+      <select onchange="chnageColor(this.value)">
+        <option selected disabled>Select Color</option>
+        <option value="red">Red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="orange">orange</option>
+      </select>
+
+      <hr><br>
+
+    <!-- <form action=""> -->
+          <input type="text" id="inp1">
+    <!-- </form> -->
+
+
+      <script>
+        function chnageColor(x){
+            document.querySelector("p").style.color=x;
+        }
+
+
+
+
+        
+
+        document.getElementById("inp1").addEventListener("change",(event)=>{
+            console.dir(event.target.value);
+        })
+      </script>
+</body>
+</html>
