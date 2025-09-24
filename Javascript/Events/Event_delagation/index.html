@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delagation</title>
+</head>
+<body>
+    
+    <div id="parent">
+        <p>Lorem ipsum dolor sit amet1111.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        let parent=document.getElementById("parent");
+
+        parent.addEventListener("click",(event)=>{
+             let para=document.getElementsByTagName("p");
+
+             //old
+            //  for(i=0;i<para.length;i++){
+            //     para[i].style.color="red";
+            //  }
+
+            //delagation
+            if((event.target)&&(event.target.nodeName=="P")){
+                event.target.style.color="red";
+               let data= event.target.innerText;
+               console.log(data)
+
+                
+            }
+        })
+
+
+        // TASK
+
+        // create a section and insert 15 student name using paragraph
+        // and print the student name after clicking on that name using event delagation
+    </script>
+
+
+    
+</body>
+</html>

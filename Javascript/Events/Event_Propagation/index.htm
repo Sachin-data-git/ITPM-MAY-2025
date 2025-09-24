@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagation</title>
+    <style>
+        #outer{
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #inner{
+            height: 200px;
+            width: 400px;
+            border: 1px solid rgb(45, 226, 0);
+                        display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            padding: 10px;
+            background-color: yellow;
+            color: red;
+            border-color: white;
+            border-radius: 10px;
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+      
+   <section id="outer">
+    <div id="inner">
+        <button id="btn">Click</button>
+    </div>
+   </section>
+
+   <script>
+
+    
+      let button=document.getElementById("btn");
+      let div=document.getElementById("inner");
+      let section=document.getElementById("outer");
+      let body=document.querySelector("body");
+
+      //Bubbling
+    //   button.addEventListener("click",()=>{
+    //     alert("This is button");
+    //   },false)
+    //   div.addEventListener("click",()=>{
+    //     alert("This is Div");
+    //   },false)
+    //   section.addEventListener("click",()=>{
+    //     alert("This is section");
+    //   },false)
+    //   body.addEventListener("click",()=>{
+    //     alert("This is body");
+    //   },false)
+
+
+    //Capturing
+
+    //   button.addEventListener("click",()=>{
+    //     alert("This is button");
+    //   },true)
+    //   div.addEventListener("click",()=>{
+    //     alert("This is Div");
+    //   },true)
+    //   section.addEventListener("click",()=>{
+    //     alert("This is section");
+    //   },true)
+    //   body.addEventListener("click",()=>{
+    //     alert("This is body");
+    //   },true)
+   </script>
+
+</body>
+</html>
