@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(callback){
+            setTimeout(() => {
+                   console.log("Data Fetched")
+                   callback();
+            }, 1000);
+        }
+        function processData(callback){
+            setTimeout(() => {
+                   console.log("Data processed")
+                   console.log(x);
+                   callback();
+            }, 1000);
+        }
+        function saveData(callback){
+            setTimeout(() => {
+                   console.log("Data Saved")
+                   callback();
+            }, 1000);
+        }
+
+      
+        fetchData(()=>{
+            processData(()=>{
+                saveData(()=>{
+                    console.log("All Task Completed...")
+                })
+            })
+        })
+
+    </script>
+</body>
+</html>

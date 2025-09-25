@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        //   Promise Method - all/allSettled/race/any
+        //  let p1=Promise.resolve(10);
+        //  let p2=Promise.reject(20);
+        //  let p3=Promise.resolve(30);
+        
+         //Using all Method
+        //  Promise.all([p1,p2,p3]).then((result)=>{
+        //     console.log(result)
+        //  }).catch((error)=>{
+        //     console.log("Its Error"+error);
+        //  })
+
+
+        //Using allsettled Method
+        //  Promise.allSettled([p1,p2,p3]).then((result)=>{
+        //     console.log(result)
+        //  }).catch((error)=>{
+        //     console.log("Its Error"+error);
+        //  })
+
+
+
+
+        //using Race Method 
+
+        const p1 = new Promise((resolve) => {
+            setTimeout(() => resolve("🏁 Promise 1 (1 second)"), 1000);
+        });
+
+        const p2 = new Promise((resolve) => {
+            setTimeout(() => resolve("🏁 Promise 2 (1500 ms)"), 1500);
+        });
+
+        const p3 = new Promise((resolve) => {
+            setTimeout(() => resolve("🏁 Promise 3 (700 ms)"), 500);
+        });
+        const p4 = new Promise((resolve) => {
+            setTimeout(() => resolve("🏁 Promise 4 (500 ms)"), 500);
+        });
+
+        Promise.race([p1, p2, p3,p4])
+            .then(result => {
+                console.log("Winner:", result);
+            });
+    </script>
+</body>
+</html>
