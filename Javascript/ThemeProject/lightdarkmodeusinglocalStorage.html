@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dark/Light Theme Toggle</title>
+  <style>
+    body {
+      font-family: Arial;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .light-theme {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .dark-theme {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>🌗 Theme Toggle Example</h2>
+  <button id="toggleThemeBtn">Toggle Theme</button>
+
+  <script>
+    const body = document.body;
+    const button = document.getElementById('toggleThemeBtn');
+
+    // Load theme from localStorage on page load
+    window.onload = function () {
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+      } else {
+        body.classList.add("light-theme");
+      }
+    };
+
+    // Toggle theme and store preference
+    button.onclick = function () {
+      if (body.classList.contains("dark-theme")) {
+        body.classList.replace("dark-theme", "light-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.replace("light-theme", "dark-theme");
+        localStorage.setItem("theme", "dark");
+      }
+    };
+  </script>
+</body>
+</html>

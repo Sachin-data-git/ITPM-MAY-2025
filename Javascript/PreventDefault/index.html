@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.geeksforgeeks.org/javascript/javascript-fetch-method/">click</a>
+
+    <form action="" id="myForm">
+        <label for="">Enter Name</label>
+        <input type="text" id="txt">
+        <label for="">Enter Password</label>
+        <input type="password">
+        <input type="submit">
+    </form>
+
+    <script>
+        let link=document.querySelector("a");
+
+        link.addEventListener("click",(event)=>{
+            event.preventDefault();
+            console.log("sigle click")
+        })
+
+        link.addEventListener("dblclick",()=>{
+            // window.location="https://www.geeksforgeeks.org/javascript/javascript-fetch-method/";
+            window.open("https://www.geeksforgeeks.org/javascript/javascript-fetch-method/")
+        })
+
+
+        let myForm=document.getElementById("myForm");
+        
+        myForm.addEventListener("submit",(event)=>{
+
+            let username=document.getElementById("txt").value;
+            let usernameEl=document.getElementById("txt");
+
+            if((!username)){
+
+                // alert("Form submission prevented")
+               usernameEl.style.border="1px solid red"
+                event.preventDefault()
+            }
+            myForm.submit();
+        })
+
+
+    </script>
+    
+</body>
+</html>
