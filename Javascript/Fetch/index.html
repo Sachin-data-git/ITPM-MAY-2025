@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="fetchData()">Axios</button>
+    <button onclick="fetchData1()">fetch</button>
+    <button onclick="fetchData2()">fetch</button>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script>
+
+        async function fetchData() {
+            try {
+                let response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+                //  let response=await axios.request({method:"GET",url:"https://jsonplaceholder.typicode.com/posts"})
+                console.log(response.data)
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+
+
+
+        //   fetch("url").then.then().catch();
+
+        function fetchData1() {
+
+            fetch("https://jsonplaceholder.typicode.com/photos").then(response => {
+                if (!(response.ok)) {
+                    throw new Error("Error Occured...")
+                }
+                return response.json();
+
+            })
+                .then(data => {
+                    console.log(data);
+                }).catch(error => {
+                    {
+                        console.log(error)
+                    }
+                })
+
+        }
+
+        async function fetchData2() {
+            const options = {
+                method: 'GET',
+                url: 'https://nfl-api-data.p.rapidapi.com/nfl-team-listing/v1/data',
+                headers: {
+                    'x-rapidapi-key': '4876bfe787mshde69d0b5ecaadfep1ec372jsnf90842f5c188',
+                    'x-rapidapi-host': 'nfl-api-data.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await axios.request(options);
+                console.log(response.data);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+
+</html>

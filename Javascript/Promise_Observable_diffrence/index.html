@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.2/rxjs.umd.min.js" integrity="sha512-9rY+ul/tDd5uFmYIG3Wf6sTYh44qwK7ZUcAejPR1RzZ4I09ubJBeOoMvLtIUjXWN5ZfR8WgZx9gwnZhMQ0ve9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+       const promise=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Data Loaded...1")
+        },1000)
+        setTimeout(()=>{
+            resolve("Data Loaded...2")
+        },2000)
+       })
+
+       promise.then((result)=>{
+        console.log(result);
+       })
+
+
+    const{Observable}=rxjs;
+
+    const observable=new Observable(subscriber=>{
+        // subscriber.next("Hello");
+        setTimeout(()=>{
+             subscriber.next("First");
+        },1000)
+        setTimeout(()=>{
+             subscriber.next("Second");
+        },2000)
+        setTimeout(()=>{
+             subscriber.next("Third");
+        },3000)
+
+       setTimeout(()=>{
+         subscriber.complete()
+       },4000)
+    })
+
+   let subscription = observable.subscribe({
+        next(value){console.log(value)},
+        complete(){console.log("ALl Task Completed")}
+    })
+
+    setTimeout(()=>{
+        subscription.unsubscribe();
+    },3500)
+
+    setTimeout(()=>{
+        observable.subscribe({
+        next(value){console.log(value)},
+        complete(){console.log("ALl Task Completed")}
+    })
+    },4000)
+   </script> 
+</body>
+</html>
