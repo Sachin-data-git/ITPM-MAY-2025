@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Encapsulation
+//     What is Encapsulation?
+
+// Encapsulation means binding data (properties) and methods (functions) together in a class, while also controlling access to them.
+// In simple words → hide internal details and only expose what is necessary.
+
+// This helps in:
+// Data security (restrict direct access)
+// Code maintainability
+// Avoiding misuse of object state
+        class BankAccount {
+            // private field (cannot be accessed directly outside)
+            #balance = 0;
+
+            constructor(owner) {
+                this.owner = owner;
+            }
+
+            // Public method to deposit money
+            deposit(amount) {
+                if (amount > 0) {
+                    this.#balance += amount;
+                    console.log(`Deposited: ${amount}`);
+                } else {
+                    console.log("Invalid deposit amount");
+                }
+            }
+
+            // Public method to withdraw money
+            withdraw(amount) {
+                if (amount <= this.#balance) {
+                    this.#balance -= amount;
+                    console.log(`Withdrawn: ${amount}`);
+                    console.log(`Available balance: ${this.#balance}`);
+                } else {
+                    console.log("Insufficient balance");
+                }
+            }
+
+            // Public method to check balance
+            getBalance() {
+                return this.#balance;
+            }
+        }
+
+        const account = new BankAccount("Rahul");
+
+        account.deposit(1000);  // ✅ Works
+        account.withdraw(500);  // ✅ Works
+        console.log(account.getBalance()); // 500
+        // console.log(account.owner);
+
+        console.log(account.balance);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+
+
+    <script>
+        // const Car={
+        //     brand:"BMW",
+        //     model:"M5",
+        //     Drive:function(){
+        //         console.log("Driving....")
+        //     }
+        // }
+
+        // Car.Drive();
+
+
+
+        // class Car{
+        //     constructor(brand,model){
+        //         this.brand=brand;
+        //         this.model=model;
+        //     }
+
+        //     show(){
+        //         console.log(`brand is ${this.brand} and model is ${this.model}`)
+        //     }
+        // }
+
+        // let carobj=new Car("BMW","M5");
+        // carobj.show();
+
+
+
+        class Parent{
+            constructor(name){
+                this.name=name;
+            }
+            
+            greet(){
+                console.log(`My name is ${this.name}`)
+            }
+        }
+
+
+         class child1 extends Parent{
+
+            constructor(name,age){
+
+                super(name);
+                this.age=age;
+            }
+            
+            greet(name,age){
+                console.log(`Hello My name is ${this.name} my age is ${this.age}`);
+            }
+         }
+         class child2 extends Parent{
+
+            constructor(name,age){
+
+                super(name);
+                this.age=age;
+            }
+            
+            greet(name,age){
+                console.log(`Hello My name is ${this.name} my age is ${this.age}`);
+            }
+         }
+
+         let c1=new child1("Rahul",20);
+        //  c1.greet();
+        c1.greet()
+
+
+        //  let c2=new child2("rajas",30);
+        //  c2.greet();
+
+    </script>
+    
+</body>
+</html>
